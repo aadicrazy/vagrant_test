@@ -1,0 +1,20 @@
+#creates a Vagrantfile, used to specify virtual machine settings
+vagrant init
+
+# To Spin up vbox's from vagrantfile
+vagrant up
+
+# To check vagrant status, It will List all VM's with their current state
+vagrant status
+
+# To show config details of all VM's. If you need specific VM specify vbox name
+vagrant ssh-config
+
+# SSH to given vbox as vagrant user
+vagrant ssh {vbox_name}
+
+# Save machine state and shut down
+vagrant suspend
+
+# Destroy all running virtual machines
+vagrant destroy --force
