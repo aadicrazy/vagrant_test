@@ -1,0 +1,6 @@
+# On CentOS vm's (web, db)
+sudo yum install epel-release
+
+sudo yum install python-setuptools -y
+sudo easy_install pip -y
+sudo yum install python-devel
