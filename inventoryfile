@@ -1,0 +1,19 @@
+web1 ansible_ssh_host=192.168.33.20 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+db1 ansible_ssh_host=192.168.33.30 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant
+
+#groups
+[webservers]
+web1
+
+[dbservers]
+db1
+
+#group of groups
+[datacenter:children]
+webservers
+dbservers
+
+#declaring vars (Now after this we can remove id and pass from lines 1 and 2 as we declaring as variable)
+[datacenter:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_pass=vagrant
